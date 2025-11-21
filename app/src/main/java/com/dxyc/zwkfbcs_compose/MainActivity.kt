@@ -7,11 +7,12 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.dxyc.zwkfbcs_compose.ui.theme.中午开发包测试Theme
+import 安卓x.组合.材质3.填充色调按钮
+import 安卓x.组合.材质3.文本
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,27 +22,24 @@ class MainActivity : ComponentActivity() {
             中午开发包测试Theme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
+                        修饰符 = Modifier.padding(innerPadding)
                     )
                 }
             }
         }
-    }
-}
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
+    }
 }
 
 @Preview(showBackground = true)
 @Composable
-fun GreetingPreview() {
+fun Greeting(修饰符: Modifier = Modifier) {
     中午开发包测试Theme {
-        Greeting("Android")
+        填充色调按钮(
+            单击回调 = { /* TODO */ },
+            修饰符 = 修饰符
+        ) {
+            文本("保存草稿")
+        }
     }
 }
